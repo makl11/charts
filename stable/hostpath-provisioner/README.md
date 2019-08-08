@@ -66,6 +66,7 @@ The following table lists the configurable parameters of the `hostpath-provision
 | `storageClass.create`          | Enable creation of a StorageClass to consume this hostpath-provisioner instance   | `true`                                |
 | `storageClass.defaultClass`    | Enable as default storage class                                                   | `true`                                |
 | `storageClass.name`            | The name to assign the created StorageClass                                       | `hostpath`                            |
+| `storageClass.reclaimPolicy`   | Set the [reclaimPolicy](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming) for PV within StorageClass | `Delete` |
 | `rbac.create`                  | Enable RABC                                                                       | `true`                                |
 | `rbac.serviceAccountName`      | Service account name                                                              | `default`                             |
 | `resources`                    | Resource limits for hostpath-provisioner pod                                      | `{}`                                  |

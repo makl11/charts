@@ -24,6 +24,11 @@ storageClass:
   ## Set a StorageClass name
   name: hostpath
 
+  ## Set reclaimPolicy for StorageClass
+  ## More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming
+  ## Options: Delete | Retain
+  reclaimPolicy: Delete  
+
 rbac:
   create: true
   ## Ignored if rbac.create is true
