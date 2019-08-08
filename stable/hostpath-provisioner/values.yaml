@@ -4,6 +4,9 @@
 
 strategyType: Recreate
 
+## Location where PVs should be stored
+hostpath: /mnt/hostpath
+
 image:
   repository: quay.io/rimusz/hostpath-provisioner
   # Note that by default we use appVersion to get image tag

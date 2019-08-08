@@ -31,12 +31,14 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: PVC_DIRECTORY
+              value: {{ .Values.hostpath }}
           volumeMounts:
             - name: pv-volume
-              mountPath: /mnt/hostpath
+              mountPath: {{ .Values.hostpath }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
       volumes:
         - name: pv-volume
           hostPath:
-            path: /mnt/hostpath
+            path: {{ .Values.hostpath }}

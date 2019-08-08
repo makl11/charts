@@ -59,6 +59,7 @@ The following table lists the configurable parameters of the `hostpath-provision
 | Parameter                      | Description                                                                       | Default                               |
 |:-------------------------------|:----------------------------------------------------------------------------------|:--------------------------------------|
 | `strategyType`                 | Pod recreation type                                                               | `Recreate`                            |
+| `hostpath`                     | Location where PVs should be stored                                               | `/mnt/hostpath`                       |
 | `image.repository`             | The image repository to pull from                                                 | `quay.io/rimusz/hostpath-provisioner` |
 | `image.tag`                    | The image tag to use                                                              | ``                                    |
 | `image.pullPolicy`             | Image pull policy                                                                 | `IfNotPresent`                        |
